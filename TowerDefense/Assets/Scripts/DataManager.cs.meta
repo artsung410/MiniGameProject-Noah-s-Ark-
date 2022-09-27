@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:TowerDefense/Assets/Scripts/DataManager.cs.meta
+guid: 8f105ace66b2e7448adfc80e49f16266
+========
+guid: aa01f608d64236d49a0b818d464548e0
+>>>>>>>> 242dd5fa6936625012b3f6bdeba3b11d78a43545:TowerDefense/Assets/Scripts/TowerInventory.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

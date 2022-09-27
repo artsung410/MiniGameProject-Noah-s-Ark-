@@ -1,0 +1,17 @@
+,string,int,int,int,int,int,float,float
+,이름,소모 골드,레벨,업그레이드,업그레이드 결과,공격력,공격 사거리,공격 속도
+ID,Name,Gold,Level,Upgrade,Next_Upgrade,Attack,Attack_range,Attack_Speed
+1,machine_gun_tower,100,1,1,2,3,6,5
+2,machine_gun_tower2,150,2,2,3,4,6,5
+3,machine_gun_tower3,200,3,3,4,5,6,5
+4,machine_gun_tower4,250,4,4,5,6,6,5
+5,machine_gun_tower5,300,5,5,6,7,6,5
+6,machine_gun_tower6,350,6,6,7,8,6,5
+7,machine_gun_tower7,400,7,7,0,9,6,5
+8,howitzer_tower,200,1,1,9,20,10,0.33
+9,howitzer_tower2,300,2,2,10,25,10,0.33
+10,howitzer_tower3,400,3,3,11,30,10,0.33
+11,howitzer_tower4,500,4,4,12,35,10,0.33
+12,howitzer_tower5,600,5,5,13,40,10,0.33
+13,howitzer_tower6,700,6,6,14,45,10,0.33
+14,howitzer_tower7,800,7,7,0,50,10,0.33
