@@ -10,6 +10,9 @@ TagManager:
   - UnavailableTiles
   - PlayerNexus
   - Sword
+  - Obstacle
+  - Bull;et
+  - Bullet
   layers:
   - Default
   - TransparentFX

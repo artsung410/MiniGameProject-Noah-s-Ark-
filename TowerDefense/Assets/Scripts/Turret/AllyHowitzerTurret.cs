@@ -10,6 +10,14 @@ public class AllyHowitzerTurret : Turret
 
     public static Transform _target = null;
 
+    private AudioSource audioSource;
+    public AudioClip shootAudioClip;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void Start()
     {
         InvokeRepeating("SerchEnemy", 0f, 0.5f); // 시작과 동시에 0.5초마다 반복해서 호출
@@ -90,6 +98,9 @@ public class AllyHowitzerTurret : Turret
 
             if (_target != null)
             {
+                audioSource.clip = shootAudioClip;
+                audioSource.Play();
+
                 HowitzerBullet bullet = HowitzerBulletPool.GetObject();
                 Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
 

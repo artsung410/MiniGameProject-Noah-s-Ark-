@@ -17,7 +17,7 @@ public class EnemySpawnManager : MonoBehaviour
 
     IEnumerator EnmeySpawn()
     {
-        while(count + 1 < SpawnCount)
+        while(count < SpawnCount)
         {
             yield return new WaitForSeconds(SpawnTime);
             Enemy spawnEnemy = EnemyPool.GetObject();

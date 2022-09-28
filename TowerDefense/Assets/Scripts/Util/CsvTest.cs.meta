@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:TowerDefense/Assets/Scripts/CsvTest.cs.meta
+guid: 500b913885d9d6a45803ca12b0cc1f17
+========
+guid: b294c635afefe37438f9c46452307cc1
+>>>>>>>> 242dd5fa6936625012b3f6bdeba3b11d78a43545:TowerDefense/Assets/Scripts/LivingEntity.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

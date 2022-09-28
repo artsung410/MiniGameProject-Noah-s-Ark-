@@ -20,9 +20,12 @@ public class Enemy : LivingEntity
     public float AttackRange;
 
     private int _giveGold;
+    private AudioSource audioSource;
+    [SerializeField] AudioClip attackAudioClip;
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -49,7 +52,6 @@ public class Enemy : LivingEntity
             yield return new WaitForSeconds(0.01f);
 
             FindPlayer();
-
             if (!agent.pathPending)
             {
                 if (false == isDetactive)
@@ -75,15 +77,30 @@ public class Enemy : LivingEntity
             if (Sword.GetComponent<Animator>().GetBool("onAttack") && isDetactive == true) // ÇÃ·¹ÀÌ¾î°¡ Å¸°Ù
             {
                 targetIsPlayer.GetComponent<LivingEntity>().TakeDamage(Damage);
+                AttackSound();
             }
             else if(Sword.GetComponent<Animator>().GetBool("onAttack") && isDetactive == false) // ³Ø¼­½º°¡ Å¸°Ù
             {
                 targetIsNexus.GetComponent<LivingEntity>().TakeDamage(Damage);
+                AttackSound();
             }
             //if (Sword.GetComponent<Animator>().GetBool("onAttack"))
             //{
             //    target.GetComponent<LivingEntity>().TakeDamage(Damage);
             //}
+        }
+    }
+
+    private void AttackSound()
+    {
+        if (Sword.GetComponent<Animator>().GetBool("onAttack"))
+        {
+            audioSource.clip = attackAudioClip;
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.Stop();
         }
     }
 
@@ -97,14 +114,15 @@ public class Enemy : LivingEntity
 
         if (Distance < AttackRange)
         {
-
             Sword.GetComponent<Animator>().SetBool("onAttack", true);
+
+
             agent.speed = 0f;
         }
         else
         {
-
             Sword.GetComponent<Animator>().SetBool("onAttack", false);
+            audioSource.Stop();
             agent.speed = MoveSpeed;
 
         }
